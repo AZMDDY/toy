@@ -57,8 +57,9 @@ std::string Pos::ToStr() const
     ss << "(" << x << "," << y << ")";
     return ss.str();
 }
+
 bool Pos::operator<(const Pos& pos) const
 {
-    return this->x < pos.x && this->y < pos.y;
+    return this->x < pos.x || this->y < pos.y;
 }
 }  // namespace Utility
