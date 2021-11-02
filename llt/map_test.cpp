@@ -34,10 +34,10 @@ TEST_F(MapFixture, ZoneNumTest)
     ASSERT_EQ(ret, true);
     ret = map.Insert(Zone(Pos(1, 1), {1, 1}));
     ASSERT_EQ(ret, true);
-    ASSERT_EQ(map.zones.size(), 1);
+    ASSERT_EQ(map.zones.size(), 8);
     ret = map.Insert(Zone(Pos(2, 1), {}));
     ASSERT_EQ(ret, true);
-    ASSERT_EQ(map.zones.size(), 2);
+    ASSERT_EQ(map.zones.size(), 9);
     ret = map.Insert(Zone(Pos(map.width + 1, map.height + 1), {2, 2}));
     ASSERT_EQ(ret, false);
     ret = map.Insert(Zone(Pos(-1, -22), {}));

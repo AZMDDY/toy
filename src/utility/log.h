@@ -1,7 +1,7 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#ifndef MYTOY_LOG_H
-#define MYTOY_LOG_H
+#ifndef TOY_LOG_H
+#define TOY_LOG_H
 #include <iostream>
 #include "base.h"
 namespace Utility {
@@ -49,4 +49,4 @@ namespace details {
     };
 }  // namespace details
 }  // namespace Utility
-#endif  // MYTOY_LOG_H
+#endif  // TOY_LOG_H

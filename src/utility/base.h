@@ -1,8 +1,8 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 #include <cstring>
 
-#ifndef MYTOY_BASE_H
-# define MYTOY_BASE_H
+#ifndef TOY_BASE_H
+# define TOY_BASE_H
 # if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
 #  define OS_WINDOWS
 # elif defined(__CYGWIN__) || defined(__CYGWIN32__)
@@ -29,4 +29,4 @@
   } while (0)
 
 # define __FILENAME__ (std::strrchr(__FILE__, '/') ? (std::strrchr(__FILE__, '/') + 1) : __FILE__)
-#endif  // MYTOY_BASE_H
+#endif  // TOY_BASE_H

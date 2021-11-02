@@ -4,8 +4,8 @@
 // 2. 计算地图上最大连通区域
 // 3. 计算地图上最小连通区域
 
-#ifndef MYTOY_CONNECT_AREAS_H
-#define MYTOY_CONNECT_AREAS_H
+#ifndef TOY_CONNECT_AREAS_H
+#define TOY_CONNECT_AREAS_H
 #include <functional>
 #include "map.h"
 namespace Algorithm {
@@ -23,4 +23,4 @@ private:
     static std::vector<Utility::Pos> minArea;
 };
 }  // namespace Algorithm
-#endif  // MYTOY_CONNECT_AREAS_H
+#endif  // TOY_CONNECT_AREAS_H

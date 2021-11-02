@@ -1,7 +1,7 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#ifndef MYTOY_ZONE_H
-#define MYTOY_ZONE_H
+#ifndef TOY_ZONE_H
+#define TOY_ZONE_H
 #include <string>
 #include <vector>
 #include <set>
@@ -10,7 +10,7 @@ namespace Utility {
 class Zone {
 public:
     Zone() = default;
-    Zone(const Pos& pos, std::multiset<int32_t>  units);
+    Zone(const Pos& pos, std::multiset<int32_t> units);
     ~Zone() = default;
 
     bool operator==(const Zone& zone) const;
@@ -32,4 +32,4 @@ public:
     std::multiset<int32_t> units;
 };
 }  // namespace Utility
-#endif  // MYTOY_ZONE_H
+#endif  // TOY_ZONE_H

@@ -1,7 +1,7 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#ifndef MYTOY_MAP_H
-#define MYTOY_MAP_H
+#ifndef TOY_MAP_H
+#define TOY_MAP_H
 #include <map>
 #include "zone.h"
 namespace Utility {
@@ -21,4 +21,4 @@ public:
     int32_t height;
 };
 }  // namespace Utility
-#endif  // MYTOY_MAP_H
+#endif  // TOY_MAP_H

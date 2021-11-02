@@ -1,7 +1,7 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#ifndef MYTOY_POS_H
-#define MYTOY_POS_H
+#ifndef TOY_POS_H
+#define TOY_POS_H
 #include <cstdint>
 #include <string>
 namespace Utility {
@@ -29,4 +29,4 @@ public:
 static const Pos INVALID_POS(INT32_MAX, INT32_MAX);
 
 }  // namespace Utility
-#endif  // MYTOY_POS_H
+#endif  // TOY_POS_H
