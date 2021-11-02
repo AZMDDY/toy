@@ -10,11 +10,14 @@ public:
     Map();
     Map(int width, int height);
     ~Map() = default;
-    bool IsValidPos(const Pos& pos) const;
+    bool InRange(const Pos& pos) const;
+    bool HavePos(const Pos& pos) const;
     bool HaveZone(const Zone& zone) const;
     bool GetZone(const Pos& pos, Zone& zone) const;
     bool SetZone(const Pos& pos, const Zone& zone);
     bool Insert(const Zone& zone);
+
+    bool Empty() const;
 public:
     std::map<Pos, Zone> zones;
     int32_t width;

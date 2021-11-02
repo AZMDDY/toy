@@ -11,4 +11,4 @@ include_directories(algorithm)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
-target_link_libraries(${PROJECT_NAME} utility)
+target_link_libraries(${PROJECT_NAME} utility algorithm algorithm_astar)

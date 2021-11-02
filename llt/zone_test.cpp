@@ -21,7 +21,7 @@ TEST_F(ZoneFixture, ZoneTest)
     z1.AddUnit(3);
     ASSERT_EQ(z1.HaveUnit(1), true);
     ASSERT_EQ(z1.HaveUnit(5), false);
-    z1.RmvUnit(1);
+    z1.RmvUnits(1);
     ASSERT_EQ(z1.HaveUnit(1), false);
     ASSERT_EQ(z1 == Zone({0, 0}, {2, 3}), true);
     ASSERT_EQ(z1 == Zone({0, 1}, {1, 3}), false);
@@ -41,11 +41,11 @@ TEST_F(ZoneFixture, RmvUnitTest)
 {
     Zone z1({0, 0}, {1, 2, 3, 4, 5, 5, 3, 4});
 
-    ret = z1.RmvUnit(1);
+    ret = z1.RmvUnits(1);
     ASSERT_EQ(ret, true);
-    ret = z1.RmvUnit(1);
+    ret = z1.RmvUnits(1);
     ASSERT_EQ(ret, false);
-    ret = z1.RmvUnit(4);
+    ret = z1.RmvUnits(4);
     ASSERT_EQ(ret, true);
     ret = z1.HaveUnit(4);
     ASSERT_EQ(ret, false);

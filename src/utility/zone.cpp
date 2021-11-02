@@ -22,10 +22,10 @@ void Zone::AddUnit(int32_t unit)
     units.insert(unit);
 }
 
-bool Zone::RmvUnit(int32_t unit)
+bool Zone::RmvUnits(int32_t unit)
 {
     if (!HaveUnit(unit)) {
-        LOG_ERROR() << "the zone does not have unit: " << unit;
+        LOG_DEBUG() << "the zone does not have unit: " << unit;
         return false;
     }
     units.erase(unit);
@@ -36,7 +36,7 @@ bool Zone::RmvOneUnit(int32_t unit)
 {
     auto iter = units.find(unit);
     if (iter == units.end()) {
-        LOG_ERROR() << "the zone does not have unit: " << unit;
+        LOG_DEBUG() << "the zone does not have unit: " << unit;
         return false;
     }
     units.erase(iter);

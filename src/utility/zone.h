@@ -18,8 +18,7 @@ public:
 
     bool HaveUnit(int32_t unit) const;
     void AddUnit(int32_t unit);
-    // 会将相同unit都删除掉
-    bool RmvUnit(int32_t unit);
+    bool RmvUnits(int32_t unit);
     bool RmvOneUnit(int32_t unit);
 
     std::vector<int32_t> RepeatUnits() const;
@@ -29,7 +28,7 @@ public:
 
 public:
     Pos pos;
-    std::multiset<int32_t> units;
+    std::multiset<int32_t> units;  // unit:0 表示空格
 };
 }  // namespace Utility
 #endif  // TOY_ZONE_H
