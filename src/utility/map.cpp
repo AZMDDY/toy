@@ -45,18 +45,16 @@ bool Map::GetZone(const Pos& pos, Zone& zone) const
 
 bool Map::SetZone(const Pos& pos, const Zone& zone)
 {
-    if (!InRange(pos)) {
-        LOG_DEBUG() << "the pos " << pos.ToStr() << "is out of range.";
+    if (!HavePos(pos)) {
+        LOG_DEBUG() << "the map does not have " << zone.ToStr();
         return false;
     }
+
     if (pos != zone.pos) {
         LOG_DEBUG() << "the map's pos" << pos.ToStr() << " does not have " << zone.ToStr();
         return false;
     }
-    if (!HavePos(pos)) {
-        LOG_DEBUG() << "the zones does not have " << zone.ToStr();
-        return false;
-    }
+
     zones[pos] = zone;
     return true;
 }

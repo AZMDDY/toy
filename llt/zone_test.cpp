@@ -5,7 +5,7 @@
 using namespace Utility;
 class ZoneFixture : public ::testing::Test {
 protected:
-    void SetUp() override {}
+    void SetUp() override { SetLogLevel(LogLevel::DEBUG); }
     void TearDown() override {}
 
 protected:

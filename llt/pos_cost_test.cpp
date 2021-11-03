@@ -10,7 +10,7 @@ using namespace Utility;
 using namespace Algorithm;
 class PosCostFixture : public ::testing::Test {
 protected:
-    void SetUp() override {}
+    void SetUp() override { SetLogLevel(LogLevel::DEBUG); }
     void TearDown() override {}
 };
 

@@ -6,16 +6,24 @@
 #include "base.h"
 namespace Utility {
 
-#define LOG_DEBUG() details::LogStream() << "[D: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
-#define LOG_INFO() details::LogStream() << "[I: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
-#define LOG_ERROR() details::LogStream() << "[E: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
+enum class LogLevel { DEBUG = 0, INFO = 1, ERROR = 2 };
+
+#define LOG_DEBUG() \
+    details::LogStream(LogLevel::DEBUG) << "[D: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
+#define LOG_INFO() \
+    details::LogStream(LogLevel::INFO) << "[I: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
+#define LOG_ERROR() \
+    details::LogStream(LogLevel::ERROR) << "[E: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
+
+void SetLogLevel(LogLevel logLevel);
 
 namespace details {
     class LogStream {
     public:
-        LogStream() = default;
+        explicit LogStream(LogLevel logLevel);
         LogStream(LogStream&) = delete;
         LogStream& operator=(const LogStream&) = delete;
+        ~LogStream();
 
         template<class T>
         LogStream& operator<<(T value)
@@ -24,28 +32,13 @@ namespace details {
             return *this;
         }
 
-        LogStream& operator<<(const std::string& value)
-        {
-            data += value;
-            return *this;
-        }
-
-        LogStream& operator<<(const char* value)
-        {
-            data += value;
-            return *this;
-        }
-
-        LogStream& operator<<(char* value)
-        {
-            data += value;
-            return *this;
-        }
-
-        ~LogStream() { std::cerr << data << std::endl; }
+        LogStream& operator<<(const std::string& value);
+        LogStream& operator<<(const char* value);
+        LogStream& operator<<(char* value);
 
     private:
         std::string data;
+        LogLevel logLevel;
     };
 }  // namespace details
 }  // namespace Utility

@@ -8,6 +8,7 @@ class MapFixture : public ::testing::Test {
 protected:
     void SetUp() override
     {
+        SetLogLevel(LogLevel::DEBUG);
         map.height = 12;
         map.width = 12;
         map.Insert({{0, 0}, {1, 2}});
