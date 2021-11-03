@@ -60,6 +60,11 @@ std::string Pos::ToStr() const
 
 bool Pos::operator<(const Pos& pos) const
 {
-    return this->x < pos.x || this->y < pos.y;
+    if (x < pos.x) {
+        return true;
+    } else if (x > pos.x) {
+        return false;
+    }
+    return y < pos.y;
 }
 }  // namespace Utility

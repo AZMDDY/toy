@@ -72,3 +72,29 @@ TEST_F(MapFixture, GetSetTest)
     ret = map.SetZone({10, 0}, {{10, 0}, {1, 1, 1}});
     ASSERT_EQ(ret, false);
 }
+
+TEST_F(MapFixture, HaveTest)
+{
+    for (auto& zone : map.zones) {
+        LOG_INFO() << zone.first.ToStr() << zone.second.ToStr();
+    }
+
+    ret = map.InRange({0, 0});
+    ASSERT_EQ(ret, true);
+    ret = map.InRange({map.width, map.height});
+    ASSERT_EQ(ret, false);
+    ret = map.InRange({-1, -1});
+    ASSERT_EQ(ret, false);
+
+    ret = map.HavePos({0, 0});
+    ASSERT_EQ(ret, true);
+
+    ret = map.HavePos({1, 0});
+    ASSERT_EQ(ret, true);
+
+    ret = map.HavePos({2, 0});
+    ASSERT_EQ(ret, false);
+
+    ret = map.HavePos({3, 0});
+    ASSERT_EQ(ret, false);
+}

@@ -9,11 +9,11 @@ namespace Utility {
 enum class LogLevel { DEBUG = 0, INFO = 1, ERROR = 2 };
 
 #define LOG_DEBUG() \
-    details::LogStream(LogLevel::DEBUG) << "[D: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
+    details::LogStream(LogLevel::DEBUG) << "[D: " << __TIME__ << " <" << __FUNCTION__ << "> " << __FILENAME__ << ":" << __LINE__ << "] "
 #define LOG_INFO() \
-    details::LogStream(LogLevel::INFO) << "[I: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
+    details::LogStream(LogLevel::INFO) << "[I: " << __TIME__ << " <" << __FUNCTION__ << "> " << __FILENAME__ << ":" << __LINE__ << "] "
 #define LOG_ERROR() \
-    details::LogStream(LogLevel::ERROR) << "[E: " << __TIME__ << " " << __FILENAME__ << ":" << __LINE__ << "] "
+    details::LogStream(LogLevel::ERROR) << "[E: " << __TIME__ << " <" << __FUNCTION__ << "> " << __FILENAME__ << ":" << __LINE__ << "] "
 
 void SetLogLevel(LogLevel logLevel);
 
