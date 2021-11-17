@@ -98,3 +98,11 @@ TEST_F(MapFixture, HaveTest)
     ret = map.HavePos({3, 0});
     ASSERT_EQ(ret, false);
 }
+
+TEST_F(MapFixture, OperatorTest) {
+    auto& zone = map[Pos(0,1)];
+    LOG_INFO() << zone.ToStr();
+    zone.RmvOneUnit(1);
+    LOG_INFO() << zone.ToStr();
+    LOG_INFO() << map[Pos(0,1)].ToStr();
+}

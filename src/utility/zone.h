@@ -20,6 +20,8 @@ public:
     void AddUnit(int32_t unit);
     bool RmvUnits(int32_t unit);
     bool RmvOneUnit(int32_t unit);
+    uint32_t Count() const;
+    void Clear();
 
     std::vector<int32_t> RepeatUnits() const;
     std::vector<int32_t> GetUnitTypes() const;
@@ -30,5 +32,8 @@ public:
     Pos pos;
     std::multiset<int32_t> units;  // unit:0 表示空格
 };
+
+const static Zone INVALID_ZONE;
+const static int32_t INVALID_UINT = INT32_MAX;
 }  // namespace Utility
 #endif  // TOY_ZONE_H

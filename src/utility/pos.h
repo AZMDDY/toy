@@ -4,6 +4,7 @@
 #define TOY_POS_H
 #include <cstdint>
 #include <string>
+#include <vector>
 namespace Utility {
 class Pos {
 public:
@@ -27,6 +28,8 @@ public:
 };
 
 static const Pos INVALID_POS(INT32_MAX, INT32_MAX);
+
+static const std::vector<Pos> DIRECTION({{0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}});
 
 }  // namespace Utility
 #endif  // TOY_POS_H

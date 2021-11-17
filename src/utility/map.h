@@ -16,8 +16,11 @@ public:
     bool GetZone(const Pos& pos, Zone& zone) const;
     bool SetZone(const Pos& pos, const Zone& zone);
     bool Insert(const Zone& zone);
+    Zone& operator[](const Pos& pos);
+    Zone At(const Pos& pos) const;
 
     bool Empty() const;
+
 public:
     std::map<Pos, Zone> zones;
     int32_t width;

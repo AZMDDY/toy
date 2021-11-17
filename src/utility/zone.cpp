@@ -43,6 +43,15 @@ bool Zone::RmvOneUnit(int32_t unit)
     return true;
 }
 
+uint32_t Zone::Count() const
+{
+    return units.size();
+}
+void Zone::Clear()
+{
+    units.clear();
+}
+
 std::string Zone::ToStr() const
 {
     std::stringstream ss;

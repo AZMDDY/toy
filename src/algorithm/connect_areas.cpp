@@ -6,20 +6,46 @@ uint32_t ConnectAreas::areasNum = 0;
 std::vector<Utility::Pos> ConnectAreas::minArea = {};
 std::vector<Utility::Pos> ConnectAreas::maxArea = {};
 
+void Dfs(const std::function<bool(const Utility::Zone&)>& isBlank, Utility::Map& map, const Utility::Pos& pos, std::vector<Utility::Pos>& area)
+{
+    if (!map.HavePos(pos)) {
+        return;
+    }
+    if (!isBlank(map[pos])) {
+        return;
+    }
+
+    map[pos].Clear();
+    map[pos].AddUnit(Utility::INVALID_UINT);
+
+    area.push_back(pos);
+    for(const auto& dir : Utility::DIRECTION) {
+        Dfs(isBlank, map, pos + dir, area);
+    }
+}
+
 void ConnectAreas::Calculate(const Utility::Map& map, const std::function<bool(const Utility::Zone&)>& isBlank)
 {
     areasNum = 0;
     minArea.clear();
     maxArea.clear();
 
-    auto dfs = [](Utility::Map& map, const Utility::Pos& pos) {
-
-    };
-
+    std::vector<Utility::Pos> area;
     Utility::Map myMap = map;
     for (auto& z : myMap.zones) {
-        auto& pos = z.first;
-        auto& zone = z.second;
+        const auto pos = z.first;
+        const auto zone = z.second;
+        if (isBlank(zone)) {
+            areasNum++;
+            area.clear();
+            Dfs(isBlank, myMap, pos, area);
+            if (minArea.size() > area.size()) {
+                minArea = area;
+            }
+            if (maxArea.size() < area.size()) {
+                maxArea = area;
+            }
+        }
     }
 }
 

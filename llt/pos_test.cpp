@@ -25,4 +25,6 @@ TEST_F(PosFixture, PosOperator)
     p1 -= Pos(1, 1);
     LOG_INFO() << "p1: " << p1.ToStr();
     ASSERT_EQ(p1, Pos(10, 10));
+    auto p3 = p1 + p2;
+    LOG_INFO() << "p3: " << p3.ToStr();
 }

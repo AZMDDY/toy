@@ -76,4 +76,17 @@ bool Map::Empty() const
     }
     return zones.empty();
 }
+
+Zone& Map::operator[](const Pos& pos)
+{
+    return zones[pos];
+}
+
+Zone Map::At(const Pos& pos) const
+{
+    if(!HavePos(pos)) {
+        return INVALID_ZONE;
+    }
+    return zones.at(pos);
+}
 }  // namespace Utility
