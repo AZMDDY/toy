@@ -4,7 +4,7 @@
 #include <sstream>
 namespace Utility {
 using namespace std;
-Pos::Pos() : x(INT32_MAX), y(INT32_MAX) {}
+Pos::Pos() noexcept : x(INT32_MAX), y(INT32_MAX) {}
 
 Pos::Pos(int32_t x, int32_t y) : x(x), y(y) {}
 

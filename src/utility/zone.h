@@ -9,7 +9,7 @@
 namespace Utility {
 class Zone {
 public:
-    Zone() = default;
+    Zone() noexcept = default;
     Zone(const Pos& pos, std::multiset<int32_t> units);
     ~Zone() = default;
 
@@ -33,7 +33,7 @@ public:
     std::multiset<int32_t> units;  // unit:0 表示空格
 };
 
-const static Zone INVALID_ZONE;
+const static Zone INVALID_ZONE = {};
 const static int32_t INVALID_UINT = INT32_MAX;
 }  // namespace Utility
 #endif  // TOY_ZONE_H

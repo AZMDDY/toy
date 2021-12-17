@@ -8,7 +8,7 @@
 namespace Utility {
 class Pos {
 public:
-    Pos();
+    Pos() noexcept;
     Pos(int32_t x, int32_t y);
     Pos(const Pos& pos);
     ~Pos() = default;
@@ -27,9 +27,9 @@ public:
     int32_t y;
 };
 
-static const Pos INVALID_POS(INT32_MAX, INT32_MAX);
+static const Pos INVALID_POS;
 
-static const std::vector<Pos> DIRECTION({{0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}});
+static const std::vector<Pos> DIRECTION = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 
 }  // namespace Utility
 #endif  // TOY_POS_H
