@@ -1,8 +1,8 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
 #include "gtest/gtest.h"
-#include "log.h"
-#include "map.h"
+#include "Log.h"
+#include "Map.h"
 using namespace Utility;
 class MapFixture : public ::testing::Test {
 protected:

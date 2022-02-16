@@ -3,9 +3,9 @@
 
 #include <string>
 #include "gtest/gtest.h"
-#include "log.h"
-#include "to_str.h"
-#include "lexical_cast.h"
+#include "Log.h"
+#include "ToStr.h"
+#include "LexicalCast.h"
 using namespace std;
 using namespace Utility;
 

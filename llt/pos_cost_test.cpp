@@ -3,8 +3,8 @@
 
 #include <map>
 #include "gtest/gtest.h"
-#include "log.h"
-#include "pos_cost.h"
+#include "Log.h"
+#include "PosCost.h"
 using namespace std;
 using namespace Utility;
 using namespace Algorithm;

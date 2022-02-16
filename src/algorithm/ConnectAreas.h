@@ -7,7 +7,7 @@
 #ifndef TOY_CONNECT_AREAS_H
 #define TOY_CONNECT_AREAS_H
 #include <functional>
-#include "map.h"
+#include "Map.h"
 namespace Algorithm {
 class ConnectAreas {
 public:

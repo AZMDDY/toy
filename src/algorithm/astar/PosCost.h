@@ -6,7 +6,7 @@
 #include <memory>
 #include <utility>
 #include <string>
-#include "pos.h"
+#include "Pos.h"
 namespace Algorithm {
 class PosCost;
 using PosCostPtr = std::shared_ptr<PosCost>;

@@ -1,7 +1,7 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#include "map.h"
-#include "log.h"
+#include "Map.h"
+#include "Log.h"
 namespace Utility {
 Map::Map() : width(0), height(0) {}
 

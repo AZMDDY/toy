@@ -1,6 +1,6 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#include "connect_areas.h"
+#include "ConnectAreas.h"
 namespace Algorithm {
 uint32_t ConnectAreas::areasNum = 0;
 std::vector<Utility::Pos> ConnectAreas::minArea = {};

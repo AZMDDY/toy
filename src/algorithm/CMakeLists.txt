@@ -6,4 +6,4 @@ add_subdirectory(astar)
 
 aux_source_directory(. SRCS)
 
-add_library(algorithm ${SRCS} astar/astar.cpp astar/astar.h)
+add_library(algorithm ${SRCS})

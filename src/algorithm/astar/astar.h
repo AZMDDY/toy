@@ -5,8 +5,8 @@
 #include <vector>
 #include <map>
 #include <set>
-#include "map.h"
-#include "pos_cost.h"
+#include "Map.h"
+#include "PosCost.h"
 namespace Algorithm {
 enum class MoveType {
     D4 = 4,  // four direction

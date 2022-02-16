@@ -2,9 +2,9 @@
 // Description:
 
 #include "gtest/gtest.h"
-#include "log.h"
-#include "zone.h"
-#include "astar.h"
+#include "Log.h"
+#include "Zone.h"
+#include "AStar.h"
 using namespace Utility;
 using namespace Algorithm;
 class AStarFixture : public ::testing::Test {

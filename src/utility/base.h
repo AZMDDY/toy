@@ -1,6 +1,6 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 #include <cstring>
-#include "utility.h"
+#include "Utility.h"
 #ifndef TOY_BASE_H
 # define TOY_BASE_H
 # if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)

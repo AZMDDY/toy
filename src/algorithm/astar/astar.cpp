@@ -1,8 +1,8 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#include "astar.h"
+#include "AStar.h"
 #include <algorithm>
-#include "log.h"
+#include "Log.h"
 namespace Algorithm {
 using namespace Utility;
 

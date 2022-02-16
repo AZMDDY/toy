@@ -3,7 +3,7 @@
 #ifndef TOY_LOG_H
 #define TOY_LOG_H
 #include <iostream>
-#include "base.h"
+#include "Base.h"
 namespace Utility {
 
 enum class LogLevel { DEBUG = 0, INFO = 1, ERROR = 2 };

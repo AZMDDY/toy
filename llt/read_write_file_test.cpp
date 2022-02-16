@@ -1,8 +1,8 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 #include <string>
 #include "gtest/gtest.h"
-#include "log.h"
-#include "file.h"
+#include "Log.h"
+#include "File.h"
 using namespace std;
 using namespace Utility;
 class RWFileFixtrue : public ::testing::Test {

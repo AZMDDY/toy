@@ -1,7 +1,7 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 #include "gtest/gtest.h"
-#include "log.h"
-#include "pos.h"
+#include "Log.h"
+#include "Pos.h"
 using namespace Utility;
 class PosFixture : public ::testing::Test {
 protected:

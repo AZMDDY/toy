@@ -1,8 +1,8 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 
-#include "file.h"
+#include "File.h"
 #include <fstream>
-#include "log.h"
+#include "Log.h"
 namespace Utility {
 using namespace std;
 bool ReadFile(const string& fileName, string& content)

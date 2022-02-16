@@ -1,7 +1,7 @@
 // Copyright (c) 2021 zhengzhibing All rights reserved.
 #include "gtest/gtest.h"
-#include "log.h"
-#include "zone.h"
+#include "Log.h"
+#include "Zone.h"
 using namespace Utility;
 class ZoneFixture : public ::testing::Test {
 protected:
